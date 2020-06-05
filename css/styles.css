@@ -19,6 +19,7 @@
 	--main-bgc-color: #ffffff;
 	--secondary-bgc-color: #f5f4fa;
 	--footer-bgc-color: #2f303a;
+	--timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -157,6 +158,23 @@ body {
 
 .site-nav .link.current {
 	color: var(--accent-color);
+}
+
+.current {
+	position: relative;
+}
+
+.current::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 4px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
+	background-color: var(--accent-color);
+	border-radius: 2px;
 }
 
 /* Address Address Address*/
